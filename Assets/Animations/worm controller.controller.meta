@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Animations/worm controller.controller.meta
 guid: 64ea31126a19ef241a47a4e9974b737e
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 9100000
+========
+guid: 0da59b32a3e792049a8f8ad7ae6db856
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+>>>>>>>> master:Assets/Animations/resting worm.anim.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 

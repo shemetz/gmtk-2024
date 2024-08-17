@@ -1,9 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<<< HEAD:Assets/Prefabs.meta
 guid: f7fcfbc66a5754149b443cc3e5ed29b7
 ========
 guid: fdba199f9df2a5c4d9f683047e8e1d41
 >>>>>>>> origin/master:Assets/Art/Ant Cavern.meta
+=======
+<<<<<<<< HEAD:Assets/Scripts/AnimalControllers.meta
+guid: 9bd8748930e47b74097b09bc6cdad185
+========
+guid: fdba199f9df2a5c4d9f683047e8e1d41
+>>>>>>>> master:Assets/Art/Ant Cavern.meta
+>>>>>>> master
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

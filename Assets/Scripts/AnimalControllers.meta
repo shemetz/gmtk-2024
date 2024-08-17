@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/AnimalControllers.meta
 guid: 9bd8748930e47b74097b09bc6cdad185
+========
+guid: fdba199f9df2a5c4d9f683047e8e1d41
+>>>>>>>> master:Assets/Art/Ant Cavern.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

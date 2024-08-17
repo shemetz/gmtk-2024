@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/PlatformerToolkitDemo/Platformer Toolkit Demo/Extras/Animations/Flag.controller.meta
 guid: 27d23a26010ae400d94af4dcb5d53f02
+========
+guid: 64ea31126a19ef241a47a4e9974b737e
+>>>>>>>> master:Assets/Animations/worm controller.controller.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 9100000
