@@ -6,10 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Gecko Brain.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
     path: Assets/Scenes/AntScene.unity
     guid: 2975cd5e05de4c649a1fb911a27edc47
+  - enabled: 1
+    path: Assets/Scenes/GeckoScene.unity
+    guid: 659df89e0f68cd74ebc49295c728e7eb
+  - enabled: 1
+    path: Assets/Scenes/SlothScene.unity
+    guid: 0febeb287144977498ac8bd1aa9a9dff
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: d2a6d034406a70047be334f0b0e5290a, type: 2}

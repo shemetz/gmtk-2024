@@ -3,11 +3,11 @@ using UnityEngine.Events;
 
 public class Neuroid : MonoBehaviour
 {
-    public BrainCommand brainCommand;
+    public CommandType brainCommand;
 
     private Animator _anim;
 
-    public UnityAction<bool, BrainCommand> SendCommand;
+    public UnityEvent<bool, CommandType> SendCommand;
     
     private static readonly int Pressed = Animator.StringToHash("pressed");
 

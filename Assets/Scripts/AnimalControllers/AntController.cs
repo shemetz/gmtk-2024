@@ -14,7 +14,7 @@ public class AntController : AnimalController
         rb2d = GetComponent<Rigidbody2D>();
     }
 
-    protected override void Update()
+    /*protected override void Update()
     {
         base.Update();
 
@@ -40,7 +40,7 @@ public class AntController : AnimalController
             currentCommand = CommandType.LeftInput;
         }
         #endregion
-    }
+    }*/
 
     protected override void NoInput()
     {

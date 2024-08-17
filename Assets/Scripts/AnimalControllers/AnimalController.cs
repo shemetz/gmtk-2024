@@ -91,7 +91,7 @@ public abstract class AnimalController : MonoBehaviour
         }
     }
 
-    public virtual void SwitchCommand(CommandType commandType, bool toggleOn)
+    public virtual void SwitchCommand(bool toggleOn, CommandType commandType)
     {
         currentCommand = !toggleOn ? CommandType.None : commandType;
     }
