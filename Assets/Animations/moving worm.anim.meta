@@ -1,6 +1,20 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/PlatformerToolkitDemo/Platformer Toolkit Demo/Extras/Tiles/Tile Spritesheet/Tiles.prefab.meta
+guid: 56b65d38430b69d4fa07a10fdecc44fc
+PrefabImporter:
+========
 guid: 1cbee35eb172b87418580e6c01a17f16
 NativeFormatImporter:
+>>>>>>>> origin/master:Assets/Animations/moving worm.anim.meta
+=======
+<<<<<<<< HEAD:Assets/PlatformerToolkitDemo/Platformer Toolkit Demo/Extras/Materials/Physics/Bouncy.physicsMaterial2D.meta
+guid: 9cf5a628a99d2470bab9ff14861301e8
+========
+guid: 1cbee35eb172b87418580e6c01a17f16
+>>>>>>>> master:Assets/Animations/moving worm.anim.meta
+NativeFormatImporter:
+>>>>>>> master
   externalObjects: {}
   mainObjectFileID: 7400000
   userData: 
