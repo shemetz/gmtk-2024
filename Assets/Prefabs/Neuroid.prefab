@@ -142,7 +142,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.33
 --- !u!114 &6536453334660201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,3 +156,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brainCommand: 0
+  SendCommand:
+    m_PersistentCalls:
+      m_Calls: []
