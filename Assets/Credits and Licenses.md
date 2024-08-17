@@ -12,3 +12,8 @@ if there is any change of shape or color, no credit shall be given to the origin
 
 https://www.deviantart.com/moosader/art/Public-Domain-Worm-Sprite-210769714
 
+
+
+**Art Sprite**
+by drewmanfu
+from: https://opengameart.org/content/a-ant
