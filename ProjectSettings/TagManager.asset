@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: brain bg
+    uniqueID: 4207826929
+    locked: 0
+  - name: worm
+    uniqueID: 1841208899
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
