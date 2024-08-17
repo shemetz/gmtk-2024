@@ -1,4 +1,4 @@
-**Ant Cavern** 
+**Ant Cavern**
 Sprites made by Anokolisa:
 https://anokolisa.itch.io/basic-140-tiles-grassland-and-mines
 
