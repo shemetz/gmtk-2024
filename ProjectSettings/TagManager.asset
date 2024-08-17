@@ -11,8 +11,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Ground
+  - Player
   - 
   - 
   - 
@@ -40,4 +40,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2886510689
+    locked: 0
+  - name: BackgroundDecor
+    uniqueID: 314916283
+    locked: 0
+  - name: Foreground
+    uniqueID: 3781394413
+    locked: 0
+  - name: Terrain
+    uniqueID: 3066153471
+    locked: 0
+  - name: Player
+    uniqueID: 33007625
+    locked: 0
+  - name: ParticleEffects
+    uniqueID: 3063643691
+    locked: 0
+  - name: FrontOfPlayer
+    uniqueID: 3773388255
     locked: 0
