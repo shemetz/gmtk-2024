@@ -3121,6 +3121,14 @@ PrefabInstance:
       value: Worm
       objectReference: {fileID: 0}
     - target: {fileID: 6020549535788913155, guid: d5405accc551e374fa2d78d1b62007b9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020549535788913155, guid: d5405accc551e374fa2d78d1b62007b9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020549535788913155, guid: d5405accc551e374fa2d78d1b62007b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.21803284
       objectReference: {fileID: 0}
@@ -3158,14 +3166,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6020549535788913155, guid: d5405accc551e374fa2d78d1b62007b9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6593695560554039096, guid: d5405accc551e374fa2d78d1b62007b9, type: 3}
-      propertyPath: m_Radius
-      value: 0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 6593695560554039096, guid: d5405accc551e374fa2d78d1b62007b9, type: 3}
-      propertyPath: m_Offset.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
