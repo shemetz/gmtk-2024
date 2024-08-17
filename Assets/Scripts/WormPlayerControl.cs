@@ -18,7 +18,7 @@ public class WormPlayerControl : MonoBehaviour
     {
         _rb = gameObject.GetComponent<Rigidbody2D>();
         _trans = gameObject.GetComponent<Transform>();
-        _anim = gameObject.GetComponent<Animator>();
+        _anim = gameObject.GetComponentInChildren<Animator>();
     }
 
     void Update()
