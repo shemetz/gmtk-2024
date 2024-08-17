@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _presetName: Custom
   _accel: 79
-  _topSpeed: 9.01
+  _topSpeed: 6
   _decel: 76
   _turnSpeed: 76
   _jumpHeight: 2.25

@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 57af75825cc7a47879bf47499fde2057, type: 2}
+  m_Motion: {fileID: 7400000, guid: 92cb93a4a8d691344a2efc50fc3ffdcf, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -35,7 +35,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: running
-  m_Speed: 5
+  m_Speed: 0.3
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -2706206271580398655}
@@ -48,7 +48,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 45fcfb730310140abbd38f21bcc471bb, type: 2}
+  m_Motion: {fileID: 7400000, guid: 01ce395bfc8fc0640a6c5b0a39047aaf, type: 2}
   m_Tag: 
   m_SpeedParameter: runSpeed
   m_MirrorParameter: 
@@ -187,7 +187,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sprite
+  m_Name: AntNew
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: runSpeed

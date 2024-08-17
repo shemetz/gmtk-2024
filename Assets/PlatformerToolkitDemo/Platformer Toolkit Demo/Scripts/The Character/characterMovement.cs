@@ -81,6 +81,8 @@ namespace GMTK.PlatformerToolkit {
             //Friction is not used in this game
             desiredVelocity = new Vector2(directionX, 0f) * Mathf.Max(maxSpeed - friction, 0f);
 
+            /*RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
+            movementDirection = Vector3.Cross(hit.normal, new Vector3(0, 0, 1));*/
         }
 
         private void FixedUpdate() {
