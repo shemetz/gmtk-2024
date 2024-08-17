@@ -9,7 +9,6 @@ if there is any change of shape or color, no credit shall be given to the origin
 
 
 **Worm Sprite**
-
 https://www.deviantart.com/moosader/art/Public-Domain-Worm-Sprite-210769714
 
 
@@ -35,3 +34,7 @@ https://www.gamedeveloperstudio.com/graphics/viewgraphic.php?item=1t4x112k6i2x43
 **Bird's Nest**
 j4p4n & Jordan Irwin (AntumDeluge)
 https://opengameart.org/content/bird-nest
+
+
+**Larvae**
+https://gamedeveloperstudio.itch.io/animated-insect-lava-game-sprite
