@@ -18,7 +18,7 @@ public class WormPlayerControl : MonoBehaviour
     {
         _rb = gameObject.GetComponent<Rigidbody2D>();
         _trans = gameObject.GetComponent<Transform>();
-        _anim = gameObject.GetComponent<Animator>();
+        _anim = gameObject.GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -33,8 +33,8 @@ public class WormPlayerControl : MonoBehaviour
             // move towards WASD
             _rb.MovePosition(_rb.position + _inputVector * (movementSpeed * Time.fixedDeltaTime));
             // rotate towards WASD
-            // worm sprite is currently facing left, so we need to rotate -90 deg
-            _trans.rotation = Quaternion.LookRotation(Vector3.forward, _inputVector.Rotate2DDeg(-90));
+            // worm sprite is currently facing up, so we need to rotate 0 deg
+            _trans.rotation = Quaternion.LookRotation(Vector3.forward, _inputVector.Rotate2DDeg(0));
             // animate movement
             _anim.SetBool(AnimMoving, true);
         }
