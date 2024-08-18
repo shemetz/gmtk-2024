@@ -38,3 +38,7 @@ https://opengameart.org/content/bird-nest
 
 **Larvae**
 https://gamedeveloperstudio.itch.io/animated-insect-lava-game-sprite
+
+
+**Fungus**
+https://k-ramstack.itch.io/mushroom-art-pack

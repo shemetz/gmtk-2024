@@ -129,9 +129,9 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 82
+      y: 4
       width: 162
-      height: 67
+      height: 92
     spriteID: 18b8497593241164b868e6709be32444
     spriteBone: []
     spriteOutline: []
@@ -140,7 +140,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 82}
+    uvTransform: {x: 4, y: 4}
   - name: ant_sprite_Frame_1
     originalName: 
     pivot: {x: 0.51282054, y: -0.014925372}
@@ -149,7 +149,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 232
+      y: 257
       width: 156
       height: 67
     spriteID: e7eb12d1dce10654b89354f6fca82820
@@ -160,7 +160,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 232}
+    uvTransform: {x: 4, y: 257}
   - name: ant_sprite_Frame_2
     originalName: 
     pivot: {x: 0.51282054, y: -0.014285713}
@@ -169,7 +169,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
+      y: 104
       width: 156
       height: 70
     spriteID: 7380ef82614dd804a9eca35fc567f1d7
@@ -180,7 +180,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 4, y: 104}
   - name: ant_sprite_Frame_3
     originalName: 
     pivot: {x: 0.53333336, y: -0.014925372}
@@ -189,7 +189,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 307
+      y: 332
       width: 150
       height: 67
     spriteID: 58c535b1e4a2a1b479dba80d5e35f0a3
@@ -200,7 +200,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 307}
+    uvTransform: {x: 4, y: 332}
   - name: ant_sprite_Frame_4
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -209,7 +209,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 157
+      y: 182
       width: 162
       height: 67
     spriteID: 5f1e23b8da89b3f4caa3c9fb67d0bf55
@@ -220,7 +220,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 157}
+    uvTransform: {x: 4, y: 182}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -237,7 +237,7 @@ ScriptedImporter:
         x: 0
         y: 0
         width: 162
-        height: 67
+        height: 92
       spriteId: 18b8497593241164b868e6709be32444
     - name: ant_sprite_Frame_1
       frameIndex: 1
@@ -281,4 +281,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 162, y: 71}
+  canvasSize: {x: 162, y: 96}
