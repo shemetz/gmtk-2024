@@ -6,12 +6,16 @@ using UnityEngine.InputSystem;
 
 public class AntController : AnimalController
 {
+    public AudioClip movementSound;
+    
     [SerializeField] private characterMovement _characterMovement;
     private Rigidbody2D rb2d;
+    private AudioSource _audio;
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        _audio = GetComponent<AudioSource>();
     }
 
     /*protected override void Update()
@@ -45,15 +49,32 @@ public class AntController : AnimalController
     protected override void NoInput()
     {
         _characterMovement.OnMovement(0);
+        
+        if (_audio.isPlaying)
+        {
+            _audio.Stop();
+        }
     }
 
     protected override void LeftInput()
     {
         _characterMovement.OnMovement(-1);
+        playMovementSound();
     }
 
     protected override void RightInput()
     {
         _characterMovement.OnMovement(1);
+        playMovementSound();
+    }
+
+    private void playMovementSound()
+    {
+        if (!_audio.isPlaying)
+        {
+            _audio.loop = true;
+            _audio.clip = movementSound;
+            _audio.Play();
+        }
     }
 }
