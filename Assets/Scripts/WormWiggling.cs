@@ -66,6 +66,10 @@ public class WormWiggling : MonoBehaviour
         else
         {
             _anim.SetBool(AnimMoving, false);
+            if (_audio.isPlaying)
+            {
+                _audio.Stop();
+            }
         }
 
         if (_totalWiggleTime > 2)
