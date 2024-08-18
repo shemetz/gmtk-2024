@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: db021f96a612f26458f37a2f9c09e428
+guid: 9cf9a23b71cd8fc4eb0911a2921ac5b4
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,7 +121,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: ant_sprite_Frame_0
+  - name: ant_w_worm_sprite1_Frame_0
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -129,50 +129,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 82
-      width: 162
-      height: 67
-    spriteID: 18b8497593241164b868e6709be32444
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 82}
-  - name: ant_sprite_Frame_1
-    originalName: 
-    pivot: {x: 0.51282054, y: -0.014925372}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 232
-      width: 156
-      height: 67
-    spriteID: e7eb12d1dce10654b89354f6fca82820
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 232}
-  - name: ant_sprite_Frame_2
-    originalName: 
-    pivot: {x: 0.51282054, y: -0.014285713}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
       y: 4
-      width: 156
-      height: 70
-    spriteID: 7380ef82614dd804a9eca35fc567f1d7
+      width: 162
+      height: 92
+    spriteID: c5ae13092fd664e48b9e04c4ee01e50c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -181,18 +141,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: ant_sprite_Frame_3
+  - name: ant_w_worm_sprite1_Frame_1
     originalName: 
-    pivot: {x: 0.53333336, y: -0.014925372}
+    pivot: {x: 0.51282054, y: -0.014925374}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 307
-      width: 150
+      y: 257
+      width: 156
       height: 67
-    spriteID: 58c535b1e4a2a1b479dba80d5e35f0a3
+    spriteID: a7bebcdc0e4d11d4381c1cd2b0138005
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -200,8 +160,48 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 307}
-  - name: ant_sprite_Frame_4
+    uvTransform: {x: 4, y: 257}
+  - name: ant_w_worm_sprite1_Frame_2
+    originalName: 
+    pivot: {x: 0.51282054, y: -0.014285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 104
+      width: 156
+      height: 70
+    spriteID: 1db7c5e1b0e4afd4498244069baf561a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 104}
+  - name: ant_w_worm_sprite1_Frame_3
+    originalName: 
+    pivot: {x: 0.53333336, y: -0.014925374}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 332
+      width: 150
+      height: 67
+    spriteID: fcfb3f07a5b84674089f7cc2e3221129
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 332}
+  - name: ant_w_worm_sprite1_Frame_4
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -209,10 +209,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 157
+      y: 182
       width: 162
       height: 67
-    spriteID: 5f1e23b8da89b3f4caa3c9fb67d0bf55
+    spriteID: e8dfe7334e2200244ac176587e2e1c24
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -220,26 +220,26 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 157}
+    uvTransform: {x: 4, y: 182}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -45399639
-    name: ant_sprite
+    guid: -33947878
+    name: ant_w_worm_sprite1
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: ant_sprite_Frame_0
+    - name: ant_w_worm_sprite1_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 162
-        height: 67
-      spriteId: 18b8497593241164b868e6709be32444
-    - name: ant_sprite_Frame_1
+        height: 92
+      spriteId: c5ae13092fd664e48b9e04c4ee01e50c
+    - name: ant_w_worm_sprite1_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -247,8 +247,8 @@ ScriptedImporter:
         y: 1
         width: 156
         height: 67
-      spriteId: e7eb12d1dce10654b89354f6fca82820
-    - name: ant_sprite_Frame_2
+      spriteId: a7bebcdc0e4d11d4381c1cd2b0138005
+    - name: ant_w_worm_sprite1_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -256,8 +256,8 @@ ScriptedImporter:
         y: 1
         width: 156
         height: 70
-      spriteId: 7380ef82614dd804a9eca35fc567f1d7
-    - name: ant_sprite_Frame_3
+      spriteId: 1db7c5e1b0e4afd4498244069baf561a
+    - name: ant_w_worm_sprite1_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -265,8 +265,8 @@ ScriptedImporter:
         y: 1
         width: 150
         height: 67
-      spriteId: 58c535b1e4a2a1b479dba80d5e35f0a3
-    - name: ant_sprite_Frame_4
+      spriteId: fcfb3f07a5b84674089f7cc2e3221129
+    - name: ant_w_worm_sprite1_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -274,11 +274,11 @@ ScriptedImporter:
         y: 0
         width: 162
         height: 67
-      spriteId: 5f1e23b8da89b3f4caa3c9fb67d0bf55
+      spriteId: e8dfe7334e2200244ac176587e2e1c24
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 162, y: 71}
+  canvasSize: {x: 162, y: 96}
