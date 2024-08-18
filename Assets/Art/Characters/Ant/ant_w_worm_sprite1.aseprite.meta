@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 4
       width: 162
       height: 92
-    spriteID: 59e2edef4023f3545adba7fab5b775be
+    spriteID: c5ae13092fd664e48b9e04c4ee01e50c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 257
       width: 156
       height: 67
-    spriteID: f2abaf43b4864d5409ebfb838ab18e05
+    spriteID: a7bebcdc0e4d11d4381c1cd2b0138005
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -172,7 +172,7 @@ ScriptedImporter:
       y: 104
       width: 156
       height: 70
-    spriteID: 45e3350e962f21c41aaa32ece3ca99ff
+    spriteID: 1db7c5e1b0e4afd4498244069baf561a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -192,7 +192,7 @@ ScriptedImporter:
       y: 332
       width: 150
       height: 67
-    spriteID: d0f7bbb5d5e4adf4eaaf2835a23e508a
+    spriteID: fcfb3f07a5b84674089f7cc2e3221129
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -212,7 +212,7 @@ ScriptedImporter:
       y: 182
       width: 162
       height: 67
-    spriteID: e1a0b71c06ab5b44883e803faf7a1b67
+    spriteID: e8dfe7334e2200244ac176587e2e1c24
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -238,7 +238,7 @@ ScriptedImporter:
         y: 0
         width: 162
         height: 92
-      spriteId: 59e2edef4023f3545adba7fab5b775be
+      spriteId: c5ae13092fd664e48b9e04c4ee01e50c
     - name: ant_w_worm_sprite1_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
@@ -247,7 +247,7 @@ ScriptedImporter:
         y: 1
         width: 156
         height: 67
-      spriteId: f2abaf43b4864d5409ebfb838ab18e05
+      spriteId: a7bebcdc0e4d11d4381c1cd2b0138005
     - name: ant_w_worm_sprite1_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
@@ -256,7 +256,7 @@ ScriptedImporter:
         y: 1
         width: 156
         height: 70
-      spriteId: 45e3350e962f21c41aaa32ece3ca99ff
+      spriteId: 1db7c5e1b0e4afd4498244069baf561a
     - name: ant_w_worm_sprite1_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
@@ -265,7 +265,7 @@ ScriptedImporter:
         y: 1
         width: 150
         height: 67
-      spriteId: d0f7bbb5d5e4adf4eaaf2835a23e508a
+      spriteId: fcfb3f07a5b84674089f7cc2e3221129
     - name: ant_w_worm_sprite1_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
@@ -274,7 +274,7 @@ ScriptedImporter:
         y: 0
         width: 162
         height: 67
-      spriteId: e1a0b71c06ab5b44883e803faf7a1b67
+      spriteId: e8dfe7334e2200244ac176587e2e1c24
     linkedCells: []
     parentIndex: -1
   platformSettings: []
