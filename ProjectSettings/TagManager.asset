@@ -6,6 +6,7 @@ TagManager:
   tags:
   - neuroid
   - worm
+  - PLAYER
   layers:
   - Default
   - TransparentFX
@@ -49,8 +50,8 @@ TagManager:
   - name: brain fg
     uniqueID: 1985747735
     locked: 0
-  - name: Default
-    uniqueID: 0
+  - name: Backbackground
+    uniqueID: 2724313735
     locked: 0
   - name: Background
     uniqueID: 2886510689
@@ -63,6 +64,9 @@ TagManager:
     locked: 0
   - name: Terrain
     uniqueID: 3066153471
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Player
     uniqueID: 33007625
