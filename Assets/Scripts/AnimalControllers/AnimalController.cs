@@ -101,6 +101,18 @@ public abstract class AnimalController : MonoBehaviour
         
     }
 
+    public void Stop()
+    {
+        NoInput();
+        currentCommand = CommandType.None;
+        if (TryGetComponent<Rigidbody2D>(out Rigidbody2D rb2d))
+        {
+            rb2d.velocity = Vector2.zero;
+        }
+
+        enabled = false;
+    }
+
     protected virtual void UpInput()
     {
         

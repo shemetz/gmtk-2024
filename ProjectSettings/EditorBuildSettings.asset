@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/LarvaScene.unity
+    guid: 9306ed114c56f814598d1bd70a97f448
+  - enabled: 1
     path: Assets/Scenes/AntScene.unity
     guid: 2975cd5e05de4c649a1fb911a27edc47
   - enabled: 1
