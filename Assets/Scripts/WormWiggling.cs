@@ -25,7 +25,11 @@ public class WormWiggling : MonoBehaviour
     private bool _antApproaching = false;
     private bool _antReached = false;
 
-    public UnityEvent WormEaten;
+    // I don't know how to make this WormEaten work again...
+    // so I found a workaround.
+    //    -- itamar
+    // public UnityEvent WormEaten;
+    public GameManager gameManager;
 
     void Awake()
     {
@@ -97,6 +101,7 @@ public class WormWiggling : MonoBehaviour
         _audio.clip = nibbleSound;
         _audio.Play();
         yield return new WaitForSeconds(1);
-        WormEaten?.Invoke();
+        // WormEaten?.Invoke();
+        gameManager.LoadNextScene();
     }
 }

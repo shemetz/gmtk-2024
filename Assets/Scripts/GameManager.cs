@@ -40,20 +40,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private async void LoadNextScene()
+    public async void LoadNextScene()
     {
         if (GetEaten)
         {
             await GetEaten.PlayFeedbacksTask(eatingPosition.position);
         }
-        // TODO maybe play it a bit earlier
-        _audio.Play();
+        // TODO maybe play it a bit earlier?
+        _audio?.Play();
         await FadeIn.PlayFeedbacksTask(Vector3.zero, 1f, true);
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
-    public void LevelOver()
-    {
-        LoadNextScene();
     }
 }
