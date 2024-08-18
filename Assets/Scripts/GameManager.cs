@@ -11,8 +11,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private MMF_Player GetEaten;
     [SerializeField] private Transform eatingPosition;
 
+    private AudioSource _audio;
     private bool transitionStarted = false;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        _audio = GetComponent<AudioSource>();
+    }
+
     void Start()
     {
         FadeIn.PlayFeedbacks();
@@ -40,6 +46,8 @@ public class GameManager : MonoBehaviour
         {
             await GetEaten.PlayFeedbacksTask(eatingPosition.position);
         }
+        // TODO maybe play it a bit earlier
+        _audio.Play();
         await FadeIn.PlayFeedbacksTask(Vector3.zero, 1f, true);
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
     }
