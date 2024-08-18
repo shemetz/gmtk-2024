@@ -8,22 +8,25 @@ using UnityEngine.InputSystem;
 
 public class EagleController : AnimalController
 {
-
+    public AudioClip screechSound;
+    
     [SerializeField] private float forwardSpeed = 20f;
     [SerializeField] private float verticalSpeed = 10f;
     [SerializeField] private MMF_Player SquashStretch;
-    [SerializeField] private MMF_Player AudioPlayer;
-    private Rigidbody2D rb2d;
-    private Animator myAnimator;
-
-    private float originalSpeed;
+    private AudioSource _audio;
+    private Rigidbody2D _rb2d;
+    private Animator _anim;
+    
+    int attack = Animator.StringToHash("attack");
     
     // Start is called before the first frame update
     void Start()
     {
-        rb2d = GetComponent<Rigidbody2D>();
-        myAnimator = GetComponentInChildren<Animator>();
-        originalSpeed = forwardSpeed;
+        _rb2d = GetComponent<Rigidbody2D>();
+        _audio = GetComponent<AudioSource>();
+        _anim = GetComponent<Animator>();
+
+        _rb2d.velocity = transform.right * forwardSpeed;
     }
 
     protected override void Update()
@@ -34,7 +37,6 @@ public class EagleController : AnimalController
 
     private void FixedUpdate()
     {
-        rb2d.velocity = (transform.right * (forwardSpeed * Time.fixedDeltaTime));
     }
 
     protected override void NoInput()
@@ -66,11 +68,9 @@ public class EagleController : AnimalController
 
     protected override void Interact()
     {
+        // claws forward
+        _anim.SetTrigger(attack);
         //do screech
-
-        if (AudioPlayer)
-        {
-            AudioPlayer.PlayFeedbacks();
-        }
+        _audio.PlayOneShot(screechSound);
     }
 }
