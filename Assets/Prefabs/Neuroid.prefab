@@ -157,8 +157,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brainCommand: 0
-  soundPressed: {fileID: 8300000, guid: 6b3c40450a030034aa74d61d271877ad, type: 3}
-  soundReleased: {fileID: 8300000, guid: 757561626067a6742b977a674d5fcd2c, type: 3}
+  soundPressed: {fileID: 8300000, guid: d470e85f087b3824a89fdabe2edd3eb2, type: 3}
+  soundReleased: {fileID: 8300000, guid: d620829eee9029d4d867d1e5ee25193a, type: 3}
   SendCommand:
     m_PersistentCalls:
       m_Calls: []
@@ -174,7 +174,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0

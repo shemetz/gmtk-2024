@@ -396,12 +396,12 @@ GameObject:
   - component: {fileID: 162736184}
   - component: {fileID: 162736183}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: lizard cam text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &162736182
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1274,8 +1274,8 @@ Transform:
   m_GameObject: {fileID: 256570722}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.14, y: -0.55, z: 0}
-  m_LocalScale: {x: 0.93, y: 0.93, z: 0.93}
+  m_LocalPosition: {x: -0.14, y: -0.1, z: 0}
+  m_LocalScale: {x: 0.85, y: 0.85, z: 0.85}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 667934766}
@@ -53680,7 +53680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectColor: {r: 0.9921569, g: 0.42352945, b: 0.67058825, a: 1}
   m_EffectDistance: {x: 3, y: 3}
   m_UseGraphicAlpha: 0
 --- !u!114 &957127478
@@ -53696,7 +53696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9921569, g: 0.42352945, b: 0.67058825, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -132447,7 +132447,7 @@ MonoBehaviour:
   jumpCollider: {fileID: 3326664538348763179}
   JumpAnimation: {fileID: 174270027}
   climbSound: {fileID: 8300000, guid: a92b2db29b126d942abb9cb9cb737caf, type: 3}
-  jumpSound: {fileID: 8300000, guid: 1aa418f81dc3b38459d430c9ce2a563a, type: 3}
+  jumpSound: {fileID: 8300000, guid: bdce912f69bc15644b05ce7ff880675c, type: 3}
 --- !u!70 &3326664538348763177
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
