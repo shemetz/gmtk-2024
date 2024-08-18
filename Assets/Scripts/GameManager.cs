@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] MMF_Player FadeIn;
+    [SerializeField] private MMF_Player GetEaten;
+    [SerializeField] private Transform eatingPosition;
 
     private bool transitionStarted = false;
     // Start is called before the first frame update
@@ -25,16 +27,25 @@ public class GameManager : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !transitionStarted)
-        {
+        { 
             transitionStarted = true;
-            StartCoroutine(LoadNextScene());
+            other.GetComponent<AnimalController>().Stop();
+            LoadNextScene();
         }
     }
 
-    private IEnumerator LoadNextScene()
+    private async void LoadNextScene()
     {
-        FadeIn.PlayFeedbacksInReverse();
-        yield return new WaitForSeconds(2f);
+        if (GetEaten)
+        {
+            await GetEaten.PlayFeedbacksTask(eatingPosition.position);
+        }
+        await FadeIn.PlayFeedbacksTask(Vector3.zero, 1f, true);
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void LevelOver()
+    {
+        LoadNextScene();
     }
 }
