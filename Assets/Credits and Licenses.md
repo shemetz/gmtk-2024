@@ -42,3 +42,14 @@ https://gamedeveloperstudio.itch.io/animated-insect-lava-game-sprite
 
 **Fungus**
 https://k-ramstack.itch.io/mushroom-art-pack
+
+
+**Forest Background**
+by FeonY, from:
+https://feony.itch.io/animated-pixel-art-backgrounds-free
+
+
+**Pixel Art Platformer + Parallax Forest BG**
+by Superposition Principle
+from: 
+https://assetstore.unity.com/packages/2d/environments/2d-pixel-art-platformer-biome-american-forest-255694
