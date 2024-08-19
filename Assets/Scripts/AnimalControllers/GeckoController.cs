@@ -8,23 +8,27 @@ using UnityEngine.InputSystem;
 
 public class GeckoController : AnimalController
 {
-
     [SerializeField] private float forwardSpeed = 5f;
     [SerializeField] private float rotationSpeed = 90f;
     [SerializeField] private Collider2D normalCollider, jumpCollider;
     [SerializeField] private MMF_Player JumpAnimation;
+    [SerializeField] private AudioClip climbSound;
+    [SerializeField] private AudioClip jumpSound;
+
     private Rigidbody2D rb2d;
     private Animator myAnimator;
+    private AudioSource _audio;
 
     private float jumpTimer;
     private bool isJumping = false;
     private float originalSpeed;
-    
+
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         myAnimator = GetComponentInChildren<Animator>();
+        _audio = GetComponent<AudioSource>();
         originalSpeed = forwardSpeed;
         normalCollider.enabled = true;
         jumpCollider.enabled = false;
@@ -66,7 +70,7 @@ public class GeckoController : AnimalController
         {
             transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
         }
-    }   
+    }
 
     protected override void Jump()
     {
@@ -84,6 +88,10 @@ public class GeckoController : AnimalController
         jumpCollider.enabled = true;
         forwardSpeed *= 1.6f;
         myAnimator.speed = 0;
+        _audio.Stop();
+        _audio.loop = false;
+        _audio.clip = jumpSound;
+        _audio.Play();
         await JumpAnimation.PlayFeedbacksTask();
         normalCollider.enabled = true;
         jumpCollider.enabled = false;
@@ -91,5 +99,9 @@ public class GeckoController : AnimalController
         myAnimator.speed = 1;
         isJumping = false;
         jumpTimer = 1f;
+        _audio.Stop();
+        _audio.loop = true;
+        _audio.clip = climbSound;
+        _audio.Play();
     }
 }
