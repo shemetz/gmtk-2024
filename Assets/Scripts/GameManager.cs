@@ -54,4 +54,9 @@ public class GameManager : MonoBehaviour
             // TODO go to credits after 10 seconds of darkness?
         }
     }
+
+    public void ExitGame()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
