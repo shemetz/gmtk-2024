@@ -1,3 +1,4 @@
+using System.Collections;
 using MoreMountains.Feedbacks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -26,17 +27,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.CompareTag("Player") && !transitionStarted)
+        if (collision.CompareTag("Player") && !transitionStarted)
         {
             transitionStarted = true;
-            other.GetComponent<AnimalController>().Stop();
-            LoadNextScene();
+            collision.GetComponent<AnimalController>().Stop();
+            LoadNextScene(collision.gameObject);
         }
     }
 
-    public async void LoadNextScene()
+    public async void LoadNextScene(GameObject animal)
     {
         if (GetEaten)
         {
@@ -49,16 +50,23 @@ public class GameManager : MonoBehaviour
             _audio?.Play();
         }
         await FadeIn.PlayFeedbacksTask(Vector3.zero, 1f, true);
-        if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings - 1)
+        if (SceneManager.GetActiveScene().name != "EagleScene")
         {
             SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
         }
-        else
+        else // Scene 4:  eagle ending
         {
             // eaten by a t-rex, end of the game
+            animal.SetActive(false);
             // (audio will play for about 7 seconds)
-            // TODO go to credits after 10 seconds of darkness?
+            StartCoroutine(WaitAndExitGame());
         }
+    }
+
+    IEnumerator WaitAndExitGame()
+    {
+        yield return new WaitForSeconds(9);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void MainMenu()

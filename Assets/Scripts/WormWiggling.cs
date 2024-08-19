@@ -102,6 +102,6 @@ public class WormWiggling : MonoBehaviour
         _audio.Play();
         yield return new WaitForSeconds(1);
         // WormEaten?.Invoke();
-        gameManager.LoadNextScene();
+        gameManager.LoadNextScene(gameObject);
     }
 }
