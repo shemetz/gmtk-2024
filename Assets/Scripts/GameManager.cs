@@ -20,7 +20,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        FadeIn.PlayFeedbacks();
+        if (SceneManager.GetActiveScene().buildIndex != 0)
+        {
+            FadeIn.PlayFeedbacks();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -41,7 +44,10 @@ public class GameManager : MonoBehaviour
         }
 
         // TODO maybe play it a bit earlier?
-        _audio?.Play();
+        if (_audio)
+        {
+            _audio?.Play();
+        }
         await FadeIn.PlayFeedbacksTask(Vector3.zero, 1f, true);
         if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings - 1)
         {
@@ -55,8 +61,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ExitGame()
+    public void MainMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene(5);
     }
 }
