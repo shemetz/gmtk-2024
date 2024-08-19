@@ -1,5 +1,4 @@
 using Extensions;
-using UnityEditor.Animations;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
