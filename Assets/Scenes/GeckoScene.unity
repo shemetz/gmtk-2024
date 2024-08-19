@@ -132700,6 +132700,10 @@ PrefabInstance:
       value: -1.4233544
       objectReference: {fileID: 0}
     - target: {fileID: 2170576639558262120, guid: 2d4fa433d4078bf4ca63a6bd6e9bb671, type: 3}
+      propertyPath: managedReferences[506635567937880071].Duration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170576639558262120, guid: 2d4fa433d4078bf4ca63a6bd6e9bb671, type: 3}
       propertyPath: managedReferences[506635567937880071].TargetTransform
       value: 
       objectReference: {fileID: 843543577}
