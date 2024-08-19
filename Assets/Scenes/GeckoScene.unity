@@ -192,7 +192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: ef1c0b2c1b40c18459bd95af90dd509d, type: 3}
       propertyPath: m_SortingLayer
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: ef1c0b2c1b40c18459bd95af90dd509d, type: 3}
       propertyPath: m_SortingLayerID
@@ -289,8 +289,8 @@ Transform:
   m_Children:
   - {fileID: 1798712168}
   - {fileID: 1425808457}
-  - {fileID: 839651619}
   - {fileID: 1097469696}
+  - {fileID: 839651619}
   - {fileID: 937628557}
   - {fileID: 1001847561}
   - {fileID: 1751722298}
@@ -52658,7 +52658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: ef1c0b2c1b40c18459bd95af90dd509d, type: 3}
       propertyPath: m_SortingLayer
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: ef1c0b2c1b40c18459bd95af90dd509d, type: 3}
       propertyPath: m_SortingLayerID
@@ -53417,7 +53417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: ef1c0b2c1b40c18459bd95af90dd509d, type: 3}
       propertyPath: m_SortingLayer
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: ef1c0b2c1b40c18459bd95af90dd509d, type: 3}
       propertyPath: m_SortingLayerID
@@ -53593,7 +53593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: ef1c0b2c1b40c18459bd95af90dd509d, type: 3}
       propertyPath: m_SortingLayer
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: ef1c0b2c1b40c18459bd95af90dd509d, type: 3}
       propertyPath: m_SortingLayerID
@@ -53933,8 +53933,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.020000001, y: 0.95999974}
-  m_Size: {x: 0.26, y: 1.5800004}
+  m_Offset: {x: 0.01, y: 1.15}
+  m_Size: {x: 0.26, y: 0.71}
   m_Direction: 0
 --- !u!1001 &1117688848
 PrefabInstance:
@@ -56138,7 +56138,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.020000001, y: 0.95999974}
-  m_Size: {x: 0.26, y: 1.5800004}
+  m_Size: {x: 0.2, y: 1.5800004}
   m_Direction: 0
 --- !u!1 &1535243385
 GameObject:
