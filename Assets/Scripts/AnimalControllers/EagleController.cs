@@ -23,6 +23,7 @@ public class EagleController : AnimalController
     [SerializeField] private AudioClip[] screechSounds;
     [SerializeField] private AudioClip dashSound;
     [SerializeField] private AudioClip bumpSound;
+    [SerializeField] private AudioClip killSound;
 
     private AudioSource _audio;
     private Animator _anim;
@@ -158,8 +159,7 @@ public class EagleController : AnimalController
             {
                 // this kills the prey bird
                 collision.gameObject.GetComponent<PreyBird>().Die();
-                // TODO some cool sound effect
-                // TODO some cool visual effect
+                _audio.PlayOneShot(killSound);
             }
             else
             {
