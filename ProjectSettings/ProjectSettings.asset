@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Discordiels
-  productName: GMTK 2024
+  productName: You Are What Eats You
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -139,9 +139,8 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.8
-  preloadedAssets:
-  - {fileID: 11400000, guid: d2a6d034406a70047be334f0b0e5290a, type: 2}
+  bundleVersion: 0.82
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -162,7 +161,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Standalone: com.Discordiels.GMTK-2024
+    Standalone: com.Discordiels.You-Are-What-Eats-You
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -713,14 +712,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: GMTK 2024
+  metroPackageName: You Are What Eats You
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: GMTK 2024
+  metroApplicationDescription: You Are What Eats You
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
