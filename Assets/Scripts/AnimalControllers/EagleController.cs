@@ -10,6 +10,7 @@ using UnityEngine.InputSystem;
 public class EagleController : AnimalController
 {
     [SerializeField] private float forwardSpeed;
+    [SerializeField] private float diveSpeed;
     [SerializeField] private float verticalSpeed;
     [SerializeField] private float rotationAngle;
     [SerializeField] private float minimumDashDuration;
@@ -56,6 +57,12 @@ public class EagleController : AnimalController
             else if (_timeSinceAttack < attackDuration)
                 horizontalSpeed = (dashSpeed + forwardSpeed) / 2;
             else horizontalSpeed = forwardSpeed;
+            if (_moveInput.y > 0)
+                // slower when ascending
+                horizontalSpeed = forwardSpeed * 0.5f;
+            if (_moveInput.y < 0)
+                // faster when diving
+                horizontalSpeed = diveSpeed;
             _rb.velocity = new Vector2(horizontalSpeed, verticalSpeed * _moveInput.y);
 
             // rotate a bit up or down or reset, depending on vertical move input
@@ -64,11 +71,12 @@ public class EagleController : AnimalController
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, targetRotation),
                 Time.fixedDeltaTime * 20f);
         }
-        
+
         if (_timeSinceAttack > attackDuration)
         {
             _anim.SetBool(_isAttacking, false);
         }
+
         if (_timeSinceDash > minimumDashDuration && !_dashInput)
         {
             _anim.SetBool(_isDashing, false);
@@ -126,14 +134,29 @@ public class EagleController : AnimalController
         _audio.PlayOneShot(screechSounds[UnityEngine.Random.Range(0, screechSounds.Length)]);
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.gameObject.CompareTag("PreyBird"))
+        if (collision.gameObject.CompareTag("PreyBird"))
         {
-            if (_timeSinceAttack < attackDuration)
+            // dive from above = if collision contact is within this area
+            //
+            //  \  |  /      "+135 deg"
+            //   \ | /
+            //    \|/
+            // ----X (prey bird)
+            //    /| 
+            //   / |
+            //  /  |       "-90 deg"  (= eagle beak touches bird butt.  I'm counting it as a dive attack)
+            var collisionNormal = collision.GetContact(0).normal;
+            var angleFromLeft = Vector2.SignedAngle(Vector2.left, collisionNormal);
+            // reminder:  angle is counterclockwise
+            var isDiveCollisionFromAbove = _moveInput.y < 0 && angleFromLeft is < 135 and > -90;
+
+            var isOffensive = isDiveCollisionFromAbove || _timeSinceAttack < attackDuration;
+            if (isOffensive && _timeSinceBump > bumpEffectDuration)
             {
                 // this kills the prey bird
-                Destroy(other.gameObject);
+                Destroy(collision.gameObject);
                 // TODO some cool sound effect
                 // TODO some cool visual effect
             }
@@ -148,7 +171,7 @@ public class EagleController : AnimalController
                 _rb.velocity = new Vector2(Math.Min(_rb.velocity.x, 0), _rb.velocity.y);
                 // play bump sound
                 _audio.PlayOneShot(bumpSound);
-                other.gameObject.SendMessage("OnAccidentalCollision");
+                collision.gameObject.SendMessage("OnAccidentalCollision");
             }
         }
     }
