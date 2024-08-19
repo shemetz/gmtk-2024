@@ -37,6 +37,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void LoadNextScene()
+    {
+        this.LoadNextScene(null);
+    }
+
+
     public async void LoadNextScene(GameObject animal)
     {
         if (GetEaten)
@@ -49,6 +55,7 @@ public class GameManager : MonoBehaviour
         {
             _audio?.Play();
         }
+
         await FadeIn.PlayFeedbacksTask(Vector3.zero, 1f, true);
         if (SceneManager.GetActiveScene().name != "EagleScene")
         {
@@ -57,7 +64,7 @@ public class GameManager : MonoBehaviour
         else // Scene 4:  eagle ending
         {
             // eaten by a t-rex, end of the game
-            animal.SetActive(false);
+            animal?.SetActive(false);
             // (audio will play for about 7 seconds)
             StartCoroutine(WaitAndExitGame());
         }
@@ -77,6 +84,11 @@ public class GameManager : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1);
     }
 
     public void Credits()
