@@ -20,11 +20,12 @@ public class EagleController : AnimalController
     
     private AudioSource _audio;
     private Animator _anim;
+    private Rigidbody2D _rb;
 
     private Vector2 _moveInput;
     private float _timeSinceAttack = 999;
     private float _timeSinceDash = 999;
-    private bool _isDashing = false;
+    private bool _dashInput = false;
 
     int attack = Animator.StringToHash("attack");
 
@@ -33,12 +34,16 @@ public class EagleController : AnimalController
     {
         _audio = GetComponent<AudioSource>();
         _anim = GetComponentInChildren<Animator>();
+        _rb = GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate()
     {
-        transform.Translate(forwardSpeed * Time.fixedDeltaTime * Vector2.right, Space.World);
-        transform.Translate(verticalSpeed * Time.fixedDeltaTime * _moveInput, Space.World);
+        // transform.Translate(forwardSpeed * Time.fixedDeltaTime * Vector2.right, Space.World);
+        // transform.Translate(verticalSpeed * Time.fixedDeltaTime * _moveInput, Space.World);
+
+        var horizontalSpeed = (_dashInput || _timeSinceDash < minimumDashDuration) ? dashSpeed : forwardSpeed;
+        _rb.velocity = new Vector2(horizontalSpeed, verticalSpeed * _moveInput.y);
         
         // rotate a bit up or down or reset, depending on vertical move input
         // lerping slowly to avoid sudden changes
@@ -47,17 +52,12 @@ public class EagleController : AnimalController
 
         _timeSinceAttack += Time.fixedDeltaTime;
         _timeSinceDash += Time.fixedDeltaTime;
-
-        if (_isDashing || _timeSinceDash < minimumDashDuration)
-        {
-            transform.Translate(dashSpeed * Time.fixedDeltaTime * Vector2.right, Space.World);
-        }
     }
 
     protected override void NoInput()
     {
         _moveInput = Vector2.zero;
-        _isDashing = false;
+        _dashInput = false;
     }
 
     protected override void UpInput()
@@ -73,7 +73,7 @@ public class EagleController : AnimalController
     protected override void Jump()
     {
         //do dash
-        if (!_isDashing && _timeSinceDash > minimumDashDuration)
+        if (!_dashInput && _timeSinceDash > minimumDashDuration)
         {
             // squash to look more aerodynamic
             SquashStretch?.PlayFeedbacks();
@@ -81,7 +81,7 @@ public class EagleController : AnimalController
             _audio.PlayOneShot(dashSound);
             _timeSinceDash = 0;
         }
-        _isDashing = true;
+        _dashInput = true;
         // get pushed forward - in FixedUpdate
     }
 
