@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using GMTK.PlatformerToolkit;
 using MoreMountains.Feedbacks;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,10 +15,13 @@ public class EagleController : AnimalController
     [SerializeField] private float minimumDashDuration;
     [SerializeField] private float dashSpeed;
     [SerializeField] private float delayBetweenAttacks;
+    [SerializeField] private float attackDuration;
+    [SerializeField] private float bumpEffectDuration;
     [SerializeField] private MMF_Player SquashStretch;
     [SerializeField] private AudioClip[] screechSounds;
     [SerializeField] private AudioClip dashSound;
-    
+    [SerializeField] private AudioClip bumpSound;
+
     private AudioSource _audio;
     private Animator _anim;
     private Rigidbody2D _rb;
@@ -25,6 +29,7 @@ public class EagleController : AnimalController
     private Vector2 _moveInput;
     private float _timeSinceAttack = 999;
     private float _timeSinceDash = 999;
+    private float _timeSinceBump = 999;
     private bool _dashInput = false;
 
     int attack = Animator.StringToHash("attack");
@@ -42,16 +47,21 @@ public class EagleController : AnimalController
         // transform.Translate(forwardSpeed * Time.fixedDeltaTime * Vector2.right, Space.World);
         // transform.Translate(verticalSpeed * Time.fixedDeltaTime * _moveInput, Space.World);
 
-        var horizontalSpeed = (_dashInput || _timeSinceDash < minimumDashDuration) ? dashSpeed : forwardSpeed;
-        _rb.velocity = new Vector2(horizontalSpeed, verticalSpeed * _moveInput.y);
-        
-        // rotate a bit up or down or reset, depending on vertical move input
-        // lerping slowly to avoid sudden changes
-        float targetRotation = _moveInput.y * rotationAngle;
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, targetRotation), Time.fixedDeltaTime * 20f);
+        if (_timeSinceBump > bumpEffectDuration)
+        {
+            var horizontalSpeed = (_dashInput || _timeSinceDash < minimumDashDuration) ? dashSpeed : forwardSpeed;
+            _rb.velocity = new Vector2(horizontalSpeed, verticalSpeed * _moveInput.y);
+
+            // rotate a bit up or down or reset, depending on vertical move input
+            // lerping slowly to avoid sudden changes
+            float targetRotation = _moveInput.y * rotationAngle;
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, targetRotation),
+                Time.fixedDeltaTime * 20f);
+        }
 
         _timeSinceAttack += Time.fixedDeltaTime;
         _timeSinceDash += Time.fixedDeltaTime;
+        _timeSinceBump += Time.fixedDeltaTime;
     }
 
     protected override void NoInput()
@@ -81,6 +91,7 @@ public class EagleController : AnimalController
             _audio.PlayOneShot(dashSound);
             _timeSinceDash = 0;
         }
+
         _dashInput = true;
         // get pushed forward - in FixedUpdate
     }
@@ -91,10 +102,37 @@ public class EagleController : AnimalController
         {
             return;
         }
+
         _timeSinceAttack = 0;
         // claws forward
         _anim.SetTrigger(attack);
         //do screech
         _audio.PlayOneShot(screechSounds[UnityEngine.Random.Range(0, screechSounds.Length)]);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("PreyBird"))
+        {
+            if (_timeSinceAttack < attackDuration)
+            {
+                // this kills the prey bird
+                Destroy(other.gameObject);
+                // TODO some cool sound effect
+                // TODO some cool visual effect
+            }
+            else
+            {
+                // eagle bumps into bird, gets stuck in place for a moment
+                _timeSinceBump = 0;
+                // stop any current dash
+                _timeSinceDash = 999;
+                // stop forward momentum (keeping backward and vertical)
+                _rb.velocity = new Vector2(Math.Min(_rb.velocity.x, 0), _rb.velocity.y);
+                // play bump sound
+                _audio.PlayOneShot(bumpSound);
+                other.gameObject.SendMessage("OnAccidentalCollision");
+            }
+        }
     }
 }
