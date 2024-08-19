@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using MoreMountains.Feedbacks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,7 +9,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform eatingPosition;
 
     private AudioSource _audio;
+
     private bool transitionStarted = false;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -24,16 +23,10 @@ public class GameManager : MonoBehaviour
         FadeIn.PlayFeedbacks();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !transitionStarted)
-        { 
+        {
             transitionStarted = true;
             other.GetComponent<AnimalController>().Stop();
             LoadNextScene();
@@ -46,6 +39,7 @@ public class GameManager : MonoBehaviour
         {
             await GetEaten.PlayFeedbacksTask(eatingPosition.position);
         }
+
         // TODO maybe play it a bit earlier?
         _audio?.Play();
         await FadeIn.PlayFeedbacksTask(Vector3.zero, 1f, true);
@@ -56,7 +50,8 @@ public class GameManager : MonoBehaviour
         else
         {
             // eaten by a t-rex, end of the game
-            // TODO go to credits after 5 seconds of darkness?
+            // (audio will play for about 7 seconds)
+            // TODO go to credits after 10 seconds of darkness?
         }
     }
 }
