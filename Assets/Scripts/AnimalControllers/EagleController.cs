@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using GMTK.PlatformerToolkit;
 using MoreMountains.Feedbacks;
 using Unity.VisualScripting;
@@ -156,7 +157,7 @@ public class EagleController : AnimalController
             if (isOffensive && _timeSinceBump > bumpEffectDuration)
             {
                 // this kills the prey bird
-                Destroy(collision.gameObject);
+                collision.gameObject.GetComponent<PreyBird>().Die();
                 // TODO some cool sound effect
                 // TODO some cool visual effect
             }

@@ -1,22 +1,52 @@
+using System;
+using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PreyBird : MonoBehaviour
 {
     [SerializeField] private float forwardSpeed;
     [SerializeField] private float collisionDuration;
     [SerializeField] private AudioClip collisionScreech;
+    [SerializeField] private ParticleSystem blood;
+    [SerializeField] private GameObject visuals;
+    [field: SerializeField] private List<SpriteRenderer> renderers;
+    [SerializeField] private Material greenMat, redMat;
 
     private Rigidbody2D _rb;
     private AudioSource _audio;
 
     private float _timeSinceCollision = 999;
 
+    private void OnValidate()
+    {
+        foreach (var VARIABLE in GetComponentsInChildren<SpriteRenderer>())
+        {
+            renderers.Add(VARIABLE);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _audio = GetComponent<AudioSource>();
+
+        if (Extensions.Extensions.GetRandomBool())
+        {
+            foreach (var VARIABLE in renderers)
+            {
+                VARIABLE.material = greenMat;
+            }
+        }
+        else
+        {
+            foreach (var VARIABLE in renderers)
+            {
+                VARIABLE.material = redMat;
+            }
+        }
     }
 
     private void FixedUpdate()
@@ -45,5 +75,12 @@ public class PreyBird : MonoBehaviour
             _audio.pitch = Random.Range(0.8f, 1.2f);
             _audio.PlayOneShot(collisionScreech);
         }
+    }
+
+    public void Die()
+    {
+        blood.Play();
+        visuals.SetActive(false);
+        GetComponent<Collider2D>().enabled = false;
     }
 }
