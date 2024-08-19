@@ -38,7 +38,7 @@ j4p4n & Jordan Irwin (AntumDeluge)
 https://opengameart.org/content/bird-nest
 
 _Credited_
-**Larvae**
+**Larva**
 https://gamedeveloperstudio.itch.io/animated-insect-lava-game-sprite
 
 
@@ -71,3 +71,8 @@ _Credited_
 mejaguar@outlook.com
 from:
 https://www.pickpik.com/moss-forest-green-forest-floor-nature-light-and-shadow-92469
+
+**Acro pixel animated (T-Rex)**
+by TheDecayVoid
+from:
+https://www.deviantart.com/thedecayvoid/art/Acro-pixel-animated-883646346

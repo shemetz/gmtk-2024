@@ -49,6 +49,14 @@ public class GameManager : MonoBehaviour
         // TODO maybe play it a bit earlier?
         _audio?.Play();
         await FadeIn.PlayFeedbacksTask(Vector3.zero, 1f, true);
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings - 1)
+        {
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else
+        {
+            // eaten by a t-rex, end of the game
+            // TODO go to credits after 5 seconds of darkness?
+        }
     }
 }
