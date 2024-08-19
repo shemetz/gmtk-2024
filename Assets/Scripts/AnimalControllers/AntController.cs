@@ -9,42 +9,17 @@ public class AntController : AnimalController
     public AudioClip movementSound;
     
     [SerializeField] private characterMovement _characterMovement;
-    private Rigidbody2D rb2d;
+    [SerializeField] private GameObject _controlsUi;
     private AudioSource _audio;
+
+    private bool _leftWasPressed;
+    private bool _rightWasPressed;
+    
     // Start is called before the first frame update
     void Start()
     {
-        rb2d = GetComponent<Rigidbody2D>();
         _audio = GetComponent<AudioSource>();
     }
-
-    /*protected override void Update()
-    {
-        base.Update();
-
-        #region Debug
-        if (!Input.anyKey)
-        {
-            currentCommand = CommandType.None;
-        }
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            currentCommand = CommandType.UpInput;
-        }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            currentCommand = CommandType.DownInput;
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            currentCommand = CommandType.RightInput;
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            currentCommand = CommandType.LeftInput;
-        }
-        #endregion
-    }*/
 
     protected override void NoInput()
     {
@@ -54,18 +29,25 @@ public class AntController : AnimalController
         {
             _audio.Stop();
         }
+
+        if (_leftWasPressed && _rightWasPressed)
+        {
+            _controlsUi.SetActive(false);
+        }
     }
 
     protected override void LeftInput()
     {
         _characterMovement.OnMovement(-1);
         playMovementSound();
+        _leftWasPressed = true;
     }
 
     protected override void RightInput()
     {
         _characterMovement.OnMovement(1);
         playMovementSound();
+        _rightWasPressed = true;
     }
 
     private void playMovementSound()
