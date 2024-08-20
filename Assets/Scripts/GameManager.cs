@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] MMF_Player FadeIn;
     [SerializeField] private MMF_Player GetEaten;
+    [SerializeField] private MMF_Player MusicFadeOut;
     [SerializeField] private Transform eatingPosition;
 
     private AudioSource _audio;
@@ -45,6 +46,7 @@ public class GameManager : MonoBehaviour
 
     public async void LoadNextScene(GameObject animal)
     {
+        MusicFadeOut.PlayFeedbacks();
         if (GetEaten)
         {
             await GetEaten.PlayFeedbacksTask(eatingPosition.position);
@@ -88,7 +90,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadSceneAsync(1);
     }
 
     public void Credits()
