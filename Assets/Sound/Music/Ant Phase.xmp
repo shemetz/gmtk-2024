@@ -12,10 +12,10 @@
             xmlns:xmpDM="http://ns.adobe.com/xmp/1.0/DynamicMedia/">
          <xmp:CreatorTool>Adobe Audition 24.0 (Windows)</xmp:CreatorTool>
          <xmp:CreateDate>2024-08-19T23:39:05+03:00</xmp:CreateDate>
-         <xmp:MetadataDate>2024-08-20T00:04:55+03:00</xmp:MetadataDate>
-         <xmp:ModifyDate>2024-08-20T00:04:55+03:00</xmp:ModifyDate>
-         <xmpMM:InstanceID>xmp.iid:a7d97ef1-383a-f142-9016-c84f10ff0217</xmpMM:InstanceID>
-         <xmpMM:DocumentID>xmp.did:a7d97ef1-383a-f142-9016-c84f10ff0217</xmpMM:DocumentID>
+         <xmp:MetadataDate>2024-08-20T14:35:13+03:00</xmp:MetadataDate>
+         <xmp:ModifyDate>2024-08-20T14:35:13+03:00</xmp:ModifyDate>
+         <xmpMM:InstanceID>xmp.iid:ed01776f-3da9-8f45-9a11-c0944634df54</xmpMM:InstanceID>
+         <xmpMM:DocumentID>xmp.did:ed01776f-3da9-8f45-9a11-c0944634df54</xmpMM:DocumentID>
          <xmpMM:OriginalDocumentID>xmp.did:88f6f094-2a18-7b4c-879a-e6d0dbe30547</xmpMM:OriginalDocumentID>
          <xmpMM:History>
             <rdf:Seq>
@@ -84,15 +84,43 @@
                </rdf:li>
                <rdf:li rdf:parseType="Resource">
                   <stEvt:action>saved</stEvt:action>
-                  <stEvt:instanceID>xmp.iid:a00437a5-d7db-cf46-8b18-bc5cddce9659</stEvt:instanceID>
-                  <stEvt:when>2024-08-20T00:04:55+03:00</stEvt:when>
+                  <stEvt:instanceID>xmp.iid:2dd1cfdd-76f6-6943-b8ae-0e9d0ab64e1c</stEvt:instanceID>
+                  <stEvt:when>2024-08-20T00:06:56+03:00</stEvt:when>
                   <stEvt:softwareAgent>Adobe Audition 24.0 (Windows)</stEvt:softwareAgent>
                   <stEvt:changed>/metadata</stEvt:changed>
                </rdf:li>
                <rdf:li rdf:parseType="Resource">
                   <stEvt:action>saved</stEvt:action>
-                  <stEvt:instanceID>xmp.iid:c1369d95-d457-8748-aa04-523baf6c704a</stEvt:instanceID>
-                  <stEvt:when>2024-08-20T00:04:55+03:00</stEvt:when>
+                  <stEvt:instanceID>xmp.iid:1aa6e7c4-e110-9b4d-a729-de98c8235a4c</stEvt:instanceID>
+                  <stEvt:when>2024-08-20T00:06:56+03:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition 24.0 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:a380160e-59d1-364d-b69c-1af1ce7c88a0</stEvt:instanceID>
+                  <stEvt:when>2024-08-20T00:07:56+03:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition 24.0 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:65bdac05-e1f9-0f48-8f4f-d07fea56c503</stEvt:instanceID>
+                  <stEvt:when>2024-08-20T00:07:56+03:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition 24.0 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:8b014fa8-18a7-fc4b-bee7-94c3ed82d70c</stEvt:instanceID>
+                  <stEvt:when>2024-08-20T14:35:13+03:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition 24.0 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:307abefd-a95d-db4b-b610-30e9510f2edd</stEvt:instanceID>
+                  <stEvt:when>2024-08-20T14:35:13+03:00</stEvt:when>
                   <stEvt:softwareAgent>Adobe Audition 24.0 (Windows)</stEvt:softwareAgent>
                   <stEvt:changed>/metadata</stEvt:changed>
                </rdf:li>
@@ -102,8 +130,8 @@
                </rdf:li>
                <rdf:li rdf:parseType="Resource">
                   <stEvt:action>saved</stEvt:action>
-                  <stEvt:instanceID>xmp.iid:1da72913-8025-4349-9324-e357be92f6d4</stEvt:instanceID>
-                  <stEvt:when>2024-08-20T00:04:55+03:00</stEvt:when>
+                  <stEvt:instanceID>xmp.iid:3c32f3a3-3795-624e-89ae-1866d981b5d1</stEvt:instanceID>
+                  <stEvt:when>2024-08-20T14:35:13+03:00</stEvt:when>
                   <stEvt:softwareAgent>Adobe Audition 24.0 (Windows)</stEvt:softwareAgent>
                </rdf:li>
                <rdf:li rdf:parseType="Resource">
@@ -112,21 +140,21 @@
                </rdf:li>
                <rdf:li rdf:parseType="Resource">
                   <stEvt:action>saved</stEvt:action>
-                  <stEvt:instanceID>xmp.iid:a7d97ef1-383a-f142-9016-c84f10ff0217</stEvt:instanceID>
-                  <stEvt:when>2024-08-20T00:04:55+03:00</stEvt:when>
+                  <stEvt:instanceID>xmp.iid:ed01776f-3da9-8f45-9a11-c0944634df54</stEvt:instanceID>
+                  <stEvt:when>2024-08-20T14:35:13+03:00</stEvt:when>
                   <stEvt:softwareAgent>Adobe Audition 24.0 (Windows)</stEvt:softwareAgent>
                   <stEvt:changed>/</stEvt:changed>
                </rdf:li>
             </rdf:Seq>
          </xmpMM:History>
          <xmpMM:DerivedFrom rdf:parseType="Resource">
-            <stRef:instanceID>xmp.iid:1da72913-8025-4349-9324-e357be92f6d4</stRef:instanceID>
-            <stRef:documentID>xmp.did:1da72913-8025-4349-9324-e357be92f6d4</stRef:documentID>
+            <stRef:instanceID>xmp.iid:3c32f3a3-3795-624e-89ae-1866d981b5d1</stRef:instanceID>
+            <stRef:documentID>xmp.did:3c32f3a3-3795-624e-89ae-1866d981b5d1</stRef:documentID>
             <stRef:originalDocumentID>xmp.did:88f6f094-2a18-7b4c-879a-e6d0dbe30547</stRef:originalDocumentID>
          </xmpMM:DerivedFrom>
          <dc:format>audio/ogg; codec="vorbis"</dc:format>
          <bext:originationDate>2024-08-20</bext:originationDate>
-         <bext:originationTime>00:04:55</bext:originationTime>
+         <bext:originationTime>14:35:13</bext:originationTime>
          <bext:timeReference>0</bext:timeReference>
          <creatorAtom:windowsAtom rdf:parseType="Resource">
             <creatorAtom:extension>.sesx</creatorAtom:extension>
